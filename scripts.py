@@ -2,7 +2,20 @@ from datacenter.models import Mark
 from datacenter.models import Chastisement
 from datacenter.models import Lesson
 from datacenter.models import Commendation
+from datacenter.models import Schoolkid
 import random
+
+
+def get_schoolkid(name):
+    try:
+        schoolkid = Schoolkid.objects.get(full_name__contains=name)
+    except Schoolkid.DoesNotExist:
+        print("Ученика с похожим именем нет")
+        return
+    except Schoolkid.MultipleObjectsReturned:
+        print("Уточните имя ученика")
+        return
+    return schoolkid
 
 
 def fix_marks(schoolkid):
