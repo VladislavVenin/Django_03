@@ -16,9 +16,6 @@
 
 <img width="400" height="54" alt="image" src="https://github.com/user-attachments/assets/ae590524-feba-4676-9574-ddc67b97e802" />
 
-<img width="1117" height="614" alt="image" src="https://github.com/user-attachments/assets/54193e7c-e8e2-490b-be2f-054efbcd5ee0" />
-
-
 ## create_commendation
 Принимает на вход объект модели `Schoolkid` и добавляет похвалу к случайному уроку
 
