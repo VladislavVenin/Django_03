@@ -34,7 +34,11 @@ def create_commendation(schoolkid):
     year = schoolkid.year_of_study
     letter = schoolkid.group_letter
     lessons = Lesson.objects.filter(year_of_study=year, group_letter=letter)
-    lesson = random.choice(lessons)
+    try:
+        lesson = random.choice(lessons)
+    except IndexError:
+        print("Урок не найден")
+        return
     date = lesson.date
     subject = lesson.subject
     teacher = lesson.teacher
